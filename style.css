@@ -2,13 +2,15 @@ html {
     width: 100%;
     height: 100%;
     background: rgb(39, 39, 39);
+    margin: auto;
 }
 
 body {
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 0;
+    margin: auto;
+    text-align: center;
 }
 
 header {
@@ -21,7 +23,26 @@ main {
     height: 75%;
     width: 75%;
     background: white;
-    margin: auto;
-    margin-top: 25px;
     border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+#screen {
+    background: black;
+    height: 80px;
+    width: 95%;
+    margin: auto;
+    margin-top: 14px;
+}
+
+.buttons {
+    display: grid;
+    width: 96%;
+    height: 80%;
+    background: seashell;
+    margin: auto;
+    margin-top: 15px;
 }
