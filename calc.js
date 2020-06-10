@@ -35,3 +35,29 @@ function operate(operator, num1, num2) {
 }
 
 operate(divide, 1, 2)
+
+const screen = document.querySelector('#screen')
+const clear = document.querySelector('#clear')
+const neg = document.querySelector('#neg')
+const back = document.querySelector('#back')
+const divide = document.querySelector('#divide')
+const seven = document.querySelector('#seven')
+const eight = document.querySelector('#eight')
+const nine = document.querySelector('#nine')
+const muliplyButton = document.querySelector('#multiplyButton')
+const four = document.querySelector('#four')
+const five = document.querySelector('#five')
+const six = document.querySelector('#six')
+const three = document.querySelector('#three')
+const two = document.querySelector('#two')
+const one = document.querySelector('#one')
+const addButton = document.querySelector('#addButton')
+const zeroButton = document.querySelector('#zeroButton')
+const dotButton = document.querySelector('#dotButton')
+const equals = document.querySelector('#equals')
+const subtractButton = document.querySelector('#subtractButton')
+const zero = document.querySelector('#zero')
+
+let displayValue;
+
+one.addEventListener('click', FIX ME)

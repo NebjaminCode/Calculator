@@ -72,6 +72,7 @@ main {
 #six {grid-area: six;}
 #three {grid-area: three;}
 #two {grid-area: two;}
+#one {grid-area: one;}
 #addButton {
     grid-area: addButton;
     background: rgb(155, 204, 207);
@@ -100,13 +101,14 @@ main {
         'seven eight nine multiplyButton'
         'four five six subtractButton'
         'one two three addButton'
-        'zeroButton zeroButton dotButton equals'
+        'zeroButton zeroButton dotButton equals';
 }
 
 .calc_button {
-    padding-top: 40px;
     text-align: center;
     background: rgb(197, 197, 197);
+    border: none;
+    font-size: 1.2em;
 }
 
 footer {
