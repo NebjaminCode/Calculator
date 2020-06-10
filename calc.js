@@ -37,10 +37,12 @@ function operate(operator, num1, num2) {
 operate(divide, 1, 2)
 
 const screen = document.querySelector('#screen')
+const screenContent = document.querySelector('#screenContent')
+const calcButton = document.querySelectorAll('.calc_button')
 const clear = document.querySelector('#clear')
 const neg = document.querySelector('#neg')
 const back = document.querySelector('#back')
-const divide = document.querySelector('#divide')
+const divideButton = document.querySelector('#divideButton')
 const seven = document.querySelector('#seven')
 const eight = document.querySelector('#eight')
 const nine = document.querySelector('#nine')
@@ -58,6 +60,11 @@ const equals = document.querySelector('#equals')
 const subtractButton = document.querySelector('#subtractButton')
 const zero = document.querySelector('#zero')
 
-let displayValue;
+let displayValue = "";
 
-one.addEventListener('click', FIX ME)
+for (const calc_button of calcButton) {
+    calc_button.addEventListener('click', function() {
+        displayValue = displayValue.concat(calc_button.innerText);
+        screenContent.textContent = displayValue;
+    });
+}

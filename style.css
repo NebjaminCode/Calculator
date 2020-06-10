@@ -44,6 +44,15 @@ main {
     margin-top: 14px;
 }
 
+#screenContent {
+    color: white;
+    text-align: right;
+    font-size: 2.5em;
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
 #clear {
     grid-area: clear;
     background: darkgray
@@ -56,7 +65,7 @@ main {
     grid-area: back;
     background: darkgray
 }
-#divide {
+#divideButton {
     grid-area: divide;
     background: rgb(155, 204, 207);
 }
@@ -91,7 +100,7 @@ main {
 
 .buttons {
     display: grid;
-    width: 96%;
+    width: 95%;
     height: 80%;
     background: seashell;
     margin: auto;
@@ -105,6 +114,13 @@ main {
 }
 
 .calc_button {
+    text-align: center;
+    background: rgb(197, 197, 197);
+    border: none;
+    font-size: 1.2em;
+}
+
+.calcFunc_button {
     text-align: center;
     background: rgb(197, 197, 197);
     border: none;
