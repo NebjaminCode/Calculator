@@ -3,6 +3,8 @@ html {
     height: 100%;
     background: rgb(39, 39, 39);
     margin: auto;
+    font-size: 1.3em;
+    font-family: sans-serif;
 }
 
 body {
@@ -17,16 +19,20 @@ header {
     width: 100%;
     height: 100px;
     background: pink;
+    margin: auto;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 main {
-    height: 75%;
-    width: 75%;
+    height: 70%;
+    width: 400px;
     background: white;
     border-radius: 5px;
     text-align: center;
     margin: auto;
-    margin-top: 35px;
+    margin-top: 47px;
     overflow: hidden;
 }
 
@@ -38,6 +44,50 @@ main {
     margin-top: 14px;
 }
 
+#clear {
+    grid-area: clear;
+    background: darkgray
+}
+#neg {
+    grid-area: neg;
+    background: darkgray
+}
+#back {
+    grid-area: back;
+    background: darkgray
+}
+#divide {
+    grid-area: divide;
+    background: rgb(155, 204, 207);
+}
+#seven {grid-area: seven;}
+#eight {grid-area: eight;}
+#nine {grid-area: nine;}
+#multiplyButton {
+    grid-area: multiplyButton;
+    background: rgb(155, 204, 207);
+}
+#four {grid-area: four;}
+#five {grid-area: five;}
+#six {grid-area: six;}
+#three {grid-area: three;}
+#two {grid-area: two;}
+#addButton {
+    grid-area: addButton;
+    background: rgb(155, 204, 207);
+}
+#zeroButton {grid-area: zeroButton;}
+#dotButton {grid-area: dotButton;}
+#equals {
+    grid-area: equals;
+    background: rgb(155, 204, 207);
+}
+#subtractButton {
+    grid-area: subtractButton;
+    background: rgb(155, 204, 207);
+}
+
+
 .buttons {
     display: grid;
     width: 96%;
@@ -45,4 +95,26 @@ main {
     background: seashell;
     margin: auto;
     margin-top: 15px;
+    grid-template-areas: 
+        'clear neg back divide'
+        'seven eight nine multiplyButton'
+        'four five six subtractButton'
+        'one two three addButton'
+        'zeroButton zeroButton dotButton equals'
+}
+
+.calc_button {
+    padding-top: 40px;
+    text-align: center;
+    background: rgb(197, 197, 197);
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    background: pink;
+    position: absolute;
+    margin: auto;
+    margin-bottom: 0;    
+    bottom: 0;
 }
