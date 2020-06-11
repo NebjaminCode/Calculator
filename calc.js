@@ -24,21 +24,20 @@ function divide() {
 
 function operate(operator, num1, num2) {
   if (operator == add) {
-      add(num1, num2);
+     return add(num1, num2);
   } else if (operator == subtract) {
-      subtract(num1, num2);
+     return subtract(num1, num2);
   } else if (operator == multiply) {
-      multiply(num1, num2);
+     return  multiply(num1, num2);
   } else if (operator == divide) {
-      divide(num1, num2);
+     return  divide(num1, num2);
   } 
 }
-
-operate(divide, 1, 2)
 
 const screen = document.querySelector('#screen')
 const screenContent = document.querySelector('#screenContent')
 const calcButton = document.querySelectorAll('.calc_button')
+const calcFuncButton = document.querySelectorAll('.calcFunc_button')
 const clear = document.querySelector('#clear')
 const neg = document.querySelector('#neg')
 const back = document.querySelector('#back')
@@ -46,7 +45,7 @@ const divideButton = document.querySelector('#divideButton')
 const seven = document.querySelector('#seven')
 const eight = document.querySelector('#eight')
 const nine = document.querySelector('#nine')
-const muliplyButton = document.querySelector('#multiplyButton')
+const multiplyButton = document.querySelector('#multiplyButton')
 const four = document.querySelector('#four')
 const five = document.querySelector('#five')
 const six = document.querySelector('#six')
@@ -68,3 +67,61 @@ for (const calc_button of calcButton) {
         screenContent.textContent = displayValue;
     });
 }
+
+let operator;
+let num1;
+
+let clearFunc = function () {
+    num1 = displayValue;
+    displayValue = '';
+    screenContent.textContent = displayValue
+    return num1
+}
+
+clear.addEventListener('click', clearFunc)
+
+addButton.addEventListener('click', function(){
+    operator = add;
+    num1 = displayValue;
+    clearFunc()
+})
+
+subtractButton.addEventListener('click', function(){
+    operator = subtract;
+    num1 = displayValue;
+    clearFunc()
+})
+
+multiplyButton.addEventListener('click', function(){
+    operator = multiply;
+    num1 = displayValue;
+    clearFunc()
+})
+
+divideButton.addEventListener('click', function(){
+    operator = divide;
+    num1 = displayValue;
+    clearFunc()
+})
+
+neg.addEventListener('click', function(){
+    if (displayValue == 0 || displayValue == "") {
+        
+    } else {
+        displayValue = displayValue * -1;
+        screenContent.textContent = displayValue 
+    }
+
+})
+
+function finalAnswer () {
+    console.log(num1)
+    if (operator == divide && displayValue == 0) {
+        displayValue = "nope"        
+    } else {
+    displayValue = operate(operator, Number(num1), Number(displayValue));
+    }    
+    screenContent.textContent = displayValue;
+}
+
+equals.addEventListener('click', finalAnswer)

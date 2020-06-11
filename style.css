@@ -118,6 +118,19 @@ main {
     background: rgb(197, 197, 197);
     border: none;
     font-size: 1.2em;
+    outline: none;
+    transition: transform .1s ease-out;
+}
+
+.calc_button:hover {
+    background: rgb(190, 189, 189);
+    border: none;
+    outline: none;
+}
+
+.calc_button:active {
+    background: rgb(190, 189, 189);
+    transform: scale(1.02)
 }
 
 .calcFunc_button {
@@ -125,6 +138,12 @@ main {
     background: rgb(197, 197, 197);
     border: none;
     font-size: 1.2em;
+    outline: none;
+    transition: transform .1s ease-out;
+}
+
+.calcFunc_button:active {
+    transform: scale(1.02)
 }
 
 footer {
