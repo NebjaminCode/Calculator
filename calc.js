@@ -114,6 +114,12 @@ neg.addEventListener('click', function(){
 
 })
 
+back.addEventListener('click', function() {
+    displayValue = displayValue.slice(0, -1);
+    screenContent.textContent = displayValue 
+
+})
+
 function finalAnswer () {
     console.log(num1)
     if (operator == divide && displayValue == 0) {
