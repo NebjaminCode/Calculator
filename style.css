@@ -42,13 +42,14 @@ main {
     width: 95%;
     margin: auto;
     margin-top: 14px;
+    overflow: hidden;
 }
 
 #screenContent {
     color: white;
     text-align: right;
-    font-size: 2.5em;
-    margin-top: 0px;
+    font-size: 3em;
+    margin-top: -8px;
     padding-top: 15px;
     padding-right: 10px;
 }
@@ -57,17 +58,29 @@ main {
     grid-area: clear;
     background: darkgray
 }
+#clear:hover {
+    background: rgb(153, 153, 153);
+}
 #neg {
     grid-area: neg;
     background: darkgray
+}
+#neg:hover {
+    background: rgb(153, 153, 153);
 }
 #back {
     grid-area: back;
     background: darkgray
 }
+#back:hover {
+    background: rgb(153, 153, 153);
+}
 #divideButton {
     grid-area: divide;
     background: rgb(155, 204, 207);
+}
+#divideButton:hover {
+    background: rgb(145, 192, 196);
 }
 #seven {grid-area: seven;}
 #eight {grid-area: eight;}
@@ -75,6 +88,9 @@ main {
 #multiplyButton {
     grid-area: multiplyButton;
     background: rgb(155, 204, 207);
+}
+#multiplyButton:hover {
+    background: rgb(145, 192, 196);
 }
 #four {grid-area: four;}
 #five {grid-area: five;}
@@ -86,17 +102,25 @@ main {
     grid-area: addButton;
     background: rgb(155, 204, 207);
 }
+#addButton:hover {
+    background: rgb(145, 192, 196);
+}
 #zeroButton {grid-area: zeroButton;}
 #dotButton {grid-area: dotButton;}
 #equals {
     grid-area: equals;
     background: rgb(155, 204, 207);
 }
+#equals:hover {
+    background: rgb(145, 192, 196);
+}
 #subtractButton {
     grid-area: subtractButton;
     background: rgb(155, 204, 207);
 }
-
+#subtractButton:hover {
+    background: rgb(145, 192, 196);
+}
 
 .buttons {
     display: grid;
